@@ -52,9 +52,10 @@ def sum_numbers():
                 <br>
                 <button type="submit">Calcular Suma</button>
             </form>
+            <p>Variable servidor: {name}</p>
         </body>
         </html>
-        """
+        """.format(name=os.environ.get('NAME', 'DANIEL'))
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
